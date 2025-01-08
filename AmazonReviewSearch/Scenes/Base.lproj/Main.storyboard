@@ -707,22 +707,32 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="AmazonReviewSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" appearanceType="darkAqua" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="717" height="494"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rxq-yH-Ssr">
-                                <rect key="frame" x="14" y="238" width="452" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="V6T-qu-3Ww">
-                                    <font key="font" usesAppearanceFont="YES"/>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eSY-y6-XhG">
+                                <rect key="frame" x="14" y="454" width="804" height="28"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" alignment="left" title="Amazon Review Search" id="VYa-ZJ-a9M">
+                                    <font key="font" metaFont="systemLight" size="24"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <comboBox focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cN8-WD-TJn">
-                                <rect key="frame" x="113" y="161" width="99" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="H7U-lM-li8">
+                            <textField focusRingType="none" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="bjG-bu-QK8">
+                                <rect key="frame" x="16" y="417" width="378" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bjG-bu-QK8" secondAttribute="height" multiplier="18" id="n7j-zg-2We"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="search for a review here..." drawsBackground="YES" id="4Mb-ZQ-ivb">
                                     <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <comboBox focusRingType="none" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="cN8-WD-TJn">
+                                <rect key="frame" x="409" y="416" width="295" height="23"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="H7U-lM-li8">
+                                    <font key="font" metaFont="system" size="16"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <objectValues>
@@ -732,17 +742,61 @@
                                     </objectValues>
                                 </comboBoxCell>
                             </comboBox>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iJ-Bm-COw">
+                                <rect key="frame" x="16" y="16" width="685" height="385"/>
+                                <clipView key="contentView" id="z9b-8x-qtd">
+                                    <rect key="frame" x="1" y="1" width="683" height="383"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" headerView="5nK-QG-RkS" id="bOw-jY-w4c">
+                                            <rect key="frame" x="0.0" y="0.0" width="683" height="355"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <size key="intercellSpacing" width="17" height="0.0"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                        </tableView>
+                                    </subviews>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8iJ-Bm-COw" secondAttribute="height" multiplier="16:9" id="9W7-qb-M6N"/>
+                                </constraints>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="mFN-fQ-F16">
+                                    <rect key="frame" x="1" y="118" width="238" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="9k4-rA-rmL">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <tableHeaderView key="headerView" wantsLayer="YES" id="5nK-QG-RkS">
+                                    <rect key="frame" x="0.0" y="0.0" width="683" height="28"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableHeaderView>
+                            </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Rxq-yH-Ssr" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="WHy-bb-faW"/>
-                            <constraint firstAttribute="trailing" secondItem="Rxq-yH-Ssr" secondAttribute="trailing" constant="16" id="gyJ-q8-7qs"/>
-                            <constraint firstItem="Rxq-yH-Ssr" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="16" id="wGx-ra-EVq"/>
+                            <constraint firstAttribute="trailing" secondItem="8iJ-Bm-COw" secondAttribute="trailing" constant="16" id="6Wk-zq-uG9"/>
+                            <constraint firstItem="8iJ-Bm-COw" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="BLm-uQ-l7a"/>
+                            <constraint firstItem="8iJ-Bm-COw" firstAttribute="top" secondItem="bjG-bu-QK8" secondAttribute="bottom" constant="16" id="D9E-Ud-Tya"/>
+                            <constraint firstAttribute="bottom" secondItem="8iJ-Bm-COw" secondAttribute="bottom" constant="16" id="GCU-Em-ScW"/>
+                            <constraint firstAttribute="trailing" secondItem="eSY-y6-XhG" secondAttribute="trailing" constant="-99" id="Qcg-bl-0wI"/>
+                            <constraint firstItem="bjG-bu-QK8" firstAttribute="top" secondItem="eSY-y6-XhG" secondAttribute="bottom" constant="16" id="V5g-Zl-M2Q"/>
+                            <constraint firstItem="bjG-bu-QK8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="V6o-hC-4F8"/>
+                            <constraint firstAttribute="trailing" secondItem="cN8-WD-TJn" secondAttribute="trailing" constant="16" id="ePZ-Dh-bKQ"/>
+                            <constraint firstItem="eSY-y6-XhG" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="12" id="gtx-jU-yyg"/>
+                            <constraint firstItem="cN8-WD-TJn" firstAttribute="top" secondItem="eSY-y6-XhG" secondAttribute="bottom" constant="16" id="jKe-Hz-ncZ"/>
+                            <constraint firstItem="eSY-y6-XhG" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="lTb-Sd-nf3"/>
+                            <constraint firstItem="cN8-WD-TJn" firstAttribute="leading" secondItem="bjG-bu-QK8" secondAttribute="trailing" constant="16" id="o85-hL-lHx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="headerView" destination="5nK-QG-RkS" id="s4B-eH-Nrk"/>
+                        <outlet property="titleLabel" destination="VYa-ZJ-a9M" id="6JB-Fg-GrO"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="63" y="722"/>
         </scene>
     </scenes>
 </document>
